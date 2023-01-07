@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Balancing")]
+    public float timerDuration = 10;
+
+
+    [Header("Prog part")]
+    public Slider timing;
+
+
+
+    public void Update()
     {
-        
+        timing.value -= Time.deltaTime / timerDuration;
+
+
+        if (timing.value < 0)
+        {
+            //Game over
+            timing.value = 0;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetTiming()
     {
-        
+        timing.value = 1f;
     }
 }
