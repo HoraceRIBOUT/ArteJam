@@ -3,7 +3,8 @@ Shader "Custom/Shatter"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _MainTex ("Texture", 2D) = "white" {}
+        _Shatter ("Shatter", 2D) = "white" {}
+        _intensity("Intensity", Range(0, 1)) = 1
     }
     SubShader
     {
@@ -39,12 +40,17 @@ Shader "Custom/Shatter"
             }
 
             sampler2D _MainTex;
+            sampler2D _Shatter;
+            float _intensity;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
+                fixed4 dis = tex2D(_Shatter, i.uv);
+                dis = 1 - dis;
+                fixed2 uv = fixed2(i.uv.x + dis.r * _intensity, i.uv.y + dis.g * _intensity);//, 
+                fixed4 col = tex2D(_MainTex, uv);
                 // just invert the colors
-                col.rgb = 1 - col.rgb;
+                col.rgb = col.rgb;
                 return col;
             }
             ENDCG
