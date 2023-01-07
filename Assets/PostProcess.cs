@@ -7,6 +7,8 @@ public class PostProcess : MonoBehaviour
 {
     [Range(0, 1)]
     public float intensity = 0.009f; 
+    [Range(0,1)]
+    public float fishEye = 0f; 
 
 
     public Material matToApply;
@@ -15,6 +17,8 @@ public class PostProcess : MonoBehaviour
         if (matToApply != null)
         {
             matToApply.SetFloat("_intensity", intensity);
+            matToApply.SetFloat("_Distortion", fishEye * 3f);
+            matToApply.SetFloat("_zoomFactor", Mathf.Lerp(1, 0.75f, fishEye));
             RenderTexture tmp = destination;
             Graphics.Blit(source, tmp, matToApply);
             //Graphics.Blit(tmp, destination);

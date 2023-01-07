@@ -635,6 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 0.009
+  fishEye: 0
   matToApply: {fileID: 2100000, guid: a9de0e7bad29d6141ae60969b526d216, type: 2}
 --- !u!1 &639717405
 GameObject:
