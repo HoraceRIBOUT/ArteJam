@@ -15,7 +15,6 @@ public class Passageur : MonoBehaviour
 
     void StartGame()
     {
-        GameManager.instance.ui_man.ResetTiming();
         allRemainingChar = new List<GameObject>(allCharacterToDisplay); //make a copy, and not a ref, to the list
 
         LaunchNextChar();
@@ -36,6 +35,7 @@ public class Passageur : MonoBehaviour
 
         Character createdChar = createdGO.GetComponent<Character>();
         createdChar.Launch();
+        GameManager.instance.ui_man.ResetTiming();
 
         allRemainingChar.RemoveAt(randomNumb);
     }
