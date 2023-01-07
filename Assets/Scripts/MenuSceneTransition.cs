@@ -17,13 +17,13 @@ public class MenuSceneTransition : MonoBehaviour
     public void GameScene()
     {
         SceneManager.LoadScene(1);
-        
     }
+
     public void SwitchBaseToCredit()
     {
         menuBase.SetActive(!menuBase.activeSelf);
         menuCredit.SetActive(!menuCredit.activeSelf);
     }
-
+    
 
 }
