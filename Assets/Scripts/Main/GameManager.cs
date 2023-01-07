@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public PostProcess postProcess;
 
     public bool isGameOver = false;
+    public bool isVictory = false;
 
     public void GameOver()
     {
@@ -31,13 +32,18 @@ public class GameManager : MonoBehaviour
         ui_man.GameOver();
         postProcess.intensity = 1f;
 
-        StartCoroutine(WaitForClick());
+        PrepareForReload(1.5f);
     }
 
-    public IEnumerator WaitForClick()
+    public void PrepareForReload(float waitTime)
+    {
+        StartCoroutine(WaitForClick(waitTime));
+    }
+
+    public IEnumerator WaitForClick(float waitTime)
     {
         bool someoneclicked = false;
-        yield return new WaitForSeconds(1.5f);//for the ui to display
+        yield return new WaitForSeconds(waitTime);//for the ui to display
         while (!someoneclicked)
         {
             someoneclicked = Input.GetMouseButtonDown(0);
