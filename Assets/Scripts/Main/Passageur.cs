@@ -24,8 +24,7 @@ public class Passageur : MonoBehaviour
     public void CharSuccess()
     {
         //called by character once there puzzle is resolved
-
-        //T DO O
+        LaunchNextChar();
     }
 
     void LaunchNextChar()

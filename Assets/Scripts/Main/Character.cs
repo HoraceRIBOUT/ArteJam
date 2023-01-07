@@ -19,13 +19,13 @@ public class Character : MonoBehaviour
 
     public void GetOut()
     {
-        GameManager.instance.passageur.CharSuccess();
-
         StartCoroutine(DestroyLater());
     }
 
     public IEnumerator DestroyLater()
     {
         yield return new WaitForSeconds(timingBeforeDestoy);
+        GameManager.instance.passageur.CharSuccess();
+        Destroy(this.gameObject);
     }
 }
