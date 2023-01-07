@@ -30,6 +30,8 @@ public class Character_ClickZone : MonoBehaviour
 
         if (!canClickOnIt)
             return;
+        if (GameManager.instance.isGameOver)
+            return;
 
         if (bubbleText)
         {
@@ -50,6 +52,9 @@ public class Character_ClickZone : MonoBehaviour
 
         if (success)
         {
+
+            GameManager.instance.ui_man.Success();
+
             if(parentChar == null)
             {
                 parentChar = GetComponentInParent<Character>();
