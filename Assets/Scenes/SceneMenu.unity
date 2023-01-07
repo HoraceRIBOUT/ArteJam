@@ -240,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 264, y: 0}
   m_SizeDelta: {x: 260, y: 384.2868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &91426719
@@ -464,7 +464,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1126789099}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: StartCoroutineFadeOut
+        m_MethodName: StartCoroutineFadeOutMenuSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1613430176}
+        m_TargetAssemblyTypeName: MenuSceneTransition, Assembly-CSharp
+        m_MethodName: StartSwitchScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1983,7 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfc9d3c7fcc24bd588351a0b71b786d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 4
+  fadeTime: 5
   sounds:
   - name: MusiqueMenu
     clip: {fileID: 8300000, guid: e2c3080afd6ba4c29bdab93f9046626f, type: 3}
@@ -1991,11 +2003,17 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: ButtonPlay
+  - name: PeopleEntry
     clip: {fileID: 8300000, guid: b874ad86240f748b9bfe64820b90fe69, type: 3}
-    volume: 1
+    volume: 0.86
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: MusiqueGame
+    clip: {fileID: 8300000, guid: 77d15d791a5594186940896adaac1feb, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1126789100
 Transform:
@@ -2230,6 +2248,7 @@ GameObject:
   - component: {fileID: 1576364194}
   - component: {fileID: 1576364196}
   - component: {fileID: 1576364195}
+  - component: {fileID: 1576364197}
   m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
@@ -2292,6 +2311,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576364193}
   m_CullTransparentMesh: 1
+--- !u!95 &1576364197
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576364193}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 401ed75db006d4f04bd68eb2a5bdffcd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1613430171
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuBase: {fileID: 2039257956}
   menuCredit: {fileID: 66337425}
+  animator: {fileID: 1576364197}
 --- !u!1 &1688774570
 GameObject:
   m_ObjectHideFlags: 0
