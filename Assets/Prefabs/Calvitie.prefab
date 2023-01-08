@@ -235,8 +235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   howLongToWaitBetweenClick: 0.3
   success: 0
-  bubbleText: 0
-  textToDisplay: []
+  bubbleText: 1
+  textToDisplay:
+  - "Ma barbe est parfaitement taill\xE9e. Comme moi."
   playAnim: 1
   anima: {fileID: 0}
   triggerName: 
@@ -256,7 +257,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5525017, y: 1.0782791}
+  m_Offset: {x: 0.5525017, y: 0.18492234}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -267,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7641206, y: 1.3566312}
+  m_Size: {x: 1.7641206, y: 1.074518}
   m_EdgeRadius: 0
 --- !u!1 &3565703758570976911
 GameObject:
@@ -455,6 +456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timingBeforeDestoy: 2
   offSetY: 1
+  textToDisplay_intro:
+  - "Il a trois poils sur le caillou celui l\xE0, et il se prend pour un ours !"
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0

@@ -501,6 +501,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timingBeforeDestoy: 2
   offSetY: 1.5
+  textToDisplay_intro:
+  - "Mais oui Thibault tu es beau ! Encore un Narcisse qui est pas all\xE9 \xE0 la
+    salle depuis longtemps hein"
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0
