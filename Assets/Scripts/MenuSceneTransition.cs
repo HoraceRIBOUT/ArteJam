@@ -29,6 +29,7 @@ public class MenuSceneTransition : MonoBehaviour
 
     public IEnumerator GameScene()
     {
+        menuBase.SetActive(!menuBase.activeSelf);
         animator.SetBool("canPlay", true);
         yield return new WaitForSeconds(AudioManager.instance.fadeTime);
         SceneManager.LoadScene(1);
