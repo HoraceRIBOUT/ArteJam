@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         isGameOver = true;
         ui_man.GameOver();
         postProcess.intensity = 1f;
+        postProcess.ScreenShake(0.8f);
 
         PrepareForReload(1.5f);
     }

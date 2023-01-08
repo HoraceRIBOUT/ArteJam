@@ -61,7 +61,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Shatter:
-        m_Texture: {fileID: 2800000, guid: ca6ca30a56dcef948b4677b19a5e66df, type: 3}
+        m_Texture: {fileID: 2800000, guid: a0014a4e73be9424aa2b1a7f9cc6d76f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ShatteringImage:
