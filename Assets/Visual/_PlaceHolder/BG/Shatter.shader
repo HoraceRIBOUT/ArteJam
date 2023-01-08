@@ -75,6 +75,7 @@ Shader "Custom/Shatter"
 
                 fixed4 dis = tex2D(_Shatter, i.uv);
                 dis = 1 - dis;
+                dis -= 0.5;
                 fixed2 uv = fixed2(x + dis.r * _intensity, y + dis.g * _intensity);//, 
                 fixed4 col = tex2D(_MainTex, uv);
                 // just invert the colors
