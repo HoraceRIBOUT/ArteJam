@@ -76,7 +76,7 @@ public class AudioManager : MonoBehaviour
     {
         //float startVolume = soundClass.source.volume;
 
-        while (soundClass.source.volume < 1)
+        while (soundClass.source.volume < .75f)
         {
             soundClass.source.volume += Time.deltaTime / FadeTime;
             yield return null;

@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 5089114523811640098}
   m_Layer: 0
   m_Name: PixelArt
-  m_TagString: Untagged
+  m_TagString: PixelArt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
