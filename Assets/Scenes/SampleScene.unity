@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 0.009
-  fishEye: 0
+  fishEye: 0.04
   matToApply: {fileID: 2100000, guid: a9de0e7bad29d6141ae60969b526d216, type: 2}
 --- !u!1 &620080178
 GameObject:
@@ -2103,7 +2103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2110383073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,6 +2117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCharacterToDisplay:
+  - {fileID: 5089114523811640100, guid: c2da8a8f2c800a2478c338f77dd3daea, type: 3}
   - {fileID: 3565703758857625097, guid: c9a72eeb4eb7df745bdbbefc88598ee9, type: 3}
   - {fileID: 3565703758857625097, guid: 4e6b426e51079d64ba164c384438d3fd, type: 3}
   allRemainingChar: []

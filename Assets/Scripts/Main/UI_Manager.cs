@@ -20,6 +20,9 @@ public class UI_Manager : MonoBehaviour
 
     public void Update()
     {
+        if (!GameManager.instance.passageur.isActiveAndEnabled)
+            return;
+
         if (stopDecreasing)
             return;
 
