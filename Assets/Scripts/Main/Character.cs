@@ -10,6 +10,12 @@ public class Character : MonoBehaviour
 
 
     public float timingBeforeDestoy = 2f;
+    public float offSetY;
+
+    private void Start()
+    {
+        transform.position = new Vector3(transform.position.x, offSetY, transform.position.z);
+    }
 
     public void Launch()
     {
