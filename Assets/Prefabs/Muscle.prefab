@@ -164,8 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   howLongToWaitBetweenClick: 0.3
   success: 0
-  bubbleText: 0
-  textToDisplay: []
+  bubbleText: 1
+  textToDisplay:
+  - "Hmm... ces abdos saillants... Si je pouvais m\u2019\xE9pouser je le ferais"
   playAnim: 1
   anima: {fileID: 0}
   triggerName: 
@@ -691,8 +692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   howLongToWaitBetweenClick: 0.3
   success: 1
-  bubbleText: 0
-  textToDisplay: []
+  bubbleText: 1
+  textToDisplay:
+  - 'Non !!! Ma gonflette !!! '
   playAnim: 1
   anima: {fileID: 0}
   triggerName: 

@@ -250,7 +250,7 @@ MonoBehaviour:
   success: 1
   bubbleText: 1
   textToDisplay:
-  - 
+  - Un bussiness man sans cheveux ?! Impossible !!!
   playAnim: 1
   anima: {fileID: 0}
   triggerName: 
@@ -1016,9 +1016,7 @@ MonoBehaviour:
   howLongToWaitBetweenClick: 0.4
   success: 0
   bubbleText: 1
-  textToDisplay:
-  - "J'ai envie de lui mettre de la salet\xE9 sur ses \xE9paules..."
-  - Un p'tit molard ?
+  textToDisplay: []
   playAnim: 0
   anima: {fileID: 0}
   triggerName: 
