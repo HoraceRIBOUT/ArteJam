@@ -12,9 +12,23 @@ public class Character : MonoBehaviour
     public float timingBeforeDestoy = 2f;
     public float offSetY;
 
+    public List<string> textToDisplay_intro;
+
     private void Start()
     {
         transform.position = new Vector3(transform.position.x, offSetY, transform.position.z);
+
+        StartCoroutine(Dialogue(textToDisplay_intro));
+    }
+
+
+    public IEnumerator Dialogue(List<string> textsToDisplay)
+    {
+        foreach (string textToDisplay in textsToDisplay)
+        {
+            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay);
+            yield return new WaitForSeconds(0.3f);
+        }
     }
 
     public void Launch()
