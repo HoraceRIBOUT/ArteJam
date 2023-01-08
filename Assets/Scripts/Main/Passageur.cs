@@ -37,6 +37,19 @@ public class Passageur : MonoBehaviour
         GameObject selectedPrefabs = allRemainingChar[randomNumb];
         GameObject createdGO = Instantiate(selectedPrefabs);
 
+        if (createdGO.CompareTag("Muscle"))
+        {
+            AudioManager.instance.PlaySound("MuscleEntre");
+        }
+        if (createdGO.CompareTag("Calvitie"))
+        {
+            AudioManager.instance.PlaySound("CalvitieEntre");
+        }
+        if (createdGO.CompareTag("PixelArt"))
+        {
+            AudioManager.instance.PlaySound("JvArrive");
+        }
+
         Character createdChar = createdGO.GetComponent<Character>();
         createdChar.Launch();
         GameManager.instance.ui_man.ResetTiming();

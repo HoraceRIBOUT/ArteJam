@@ -25,6 +25,21 @@ public class Character : MonoBehaviour
 
     public void GetOut()
     {
+        if (gameObject.CompareTag("Muscle"))
+        {
+            AudioManager.instance.PlaySound("MuscleEclate");
+            AudioManager.instance.PlaySound("MuscleSortie");
+        }
+        if (gameObject.CompareTag("Calvitie"))
+        {
+            AudioManager.instance.PlaySound("CalvitieWind");
+            AudioManager.instance.PlaySound("CalvitieEntre");
+        }
+        if (gameObject.CompareTag("PixelArt"))
+        {
+            AudioManager.instance.PlaySound("JvHurt");
+            //AudioManager.instance.PlaySound("MuscleSortie");
+        }
         StartCoroutine(DestroyLater());
     }
 
