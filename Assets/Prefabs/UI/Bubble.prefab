@@ -113,7 +113,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 914.45996, y: 170.43466}
-  m_SizeDelta: {x: 336.2107, y: 141.8846}
+  m_SizeDelta: {x: 498, y: 141.8846}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &7418288149716007576
 MonoBehaviour:
@@ -131,7 +131,7 @@ MonoBehaviour:
   textTMP: {fileID: 7418288150452881856}
   rect: {fileID: 7418288149716007583}
   minMaxSize: {x: 80, y: 1200}
-  pixelPerChar: 18
+  pixelPerChar: 19
 --- !u!1 &7418288150452881862
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
