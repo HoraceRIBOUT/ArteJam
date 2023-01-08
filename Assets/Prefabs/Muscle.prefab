@@ -311,6 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3565703758570976908}
   - component: {fileID: 3565703758570976909}
+  - component: {fileID: 4518167093163663862}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -356,6 +357,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4518167093163663862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565703758570976911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ab44910b87cf94e85ef0b7a36f70ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3565703758776874251
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +479,7 @@ Transform:
   m_GameObject: {fileID: 3565703758857625097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3565703758570976908}
@@ -486,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timingBeforeDestoy: 2
-  offSetY: 2
+  offSetY: 1.5
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0
