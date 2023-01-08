@@ -458,6 +458,7 @@ MonoBehaviour:
   offSetY: 1
   textToDisplay_intro:
   - "Il a trois poils sur le caillou celui l\xE0, et il se prend pour un ours !"
+  who: 2
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0

@@ -154,6 +154,7 @@ MonoBehaviour:
   offSetY: 0
   textToDisplay_intro:
   - "Encore un qui va me demander des pi\xE8ces..."
+  who: 3
 --- !u!1 &5089114523947657979
 GameObject:
   m_ObjectHideFlags: 0
