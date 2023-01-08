@@ -1950,6 +1950,84 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: JvArrive
+    clip: {fileID: 8300000, guid: 3f5894de5f4a24c90b5facd000dcaaff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JvHurt
+    clip: {fileID: 8300000, guid: e71fc3f3a455b4923989279f8ffb1028, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JvMort
+    clip: {fileID: 8300000, guid: 0aa409b292beb4b4595a45061eab63e1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: JvSqueeze
+    clip: {fileID: 8300000, guid: e82c5d34a296747f3b84b339db070a98, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 72c7ba2a71aee4be19e01e4120a12119, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MuscleEclate
+    clip: {fileID: 8300000, guid: 86441a5a9dff840729b5aa7767fc58ec, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MuscleEntre
+    clip: {fileID: 8300000, guid: fd3904fed34b546edb2863a29d8d2194, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MuscleSortie
+    clip: {fileID: 8300000, guid: 3615aa05f27754d5f9d81f5a0664ed7b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MuscleRobinet
+    clip: {fileID: 8300000, guid: 37240462943cd416eb6855de307520a1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MuscleSlap
+    clip: {fileID: 8300000, guid: ddcceb69cf00540f2bb521ddf7827431, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CalvitieEntre
+    clip: {fileID: 8300000, guid: be7135687e1e9400eb72c58673a9bd40, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CalvitieWind
+    clip: {fileID: 8300000, guid: a647a3bff7787434aaa74db572cc2d42, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FinChrono
+    clip: {fileID: 8300000, guid: bf2128247d69d460c8fa855a784228b7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1126789100
 Transform:
   m_ObjectHideFlags: 0
