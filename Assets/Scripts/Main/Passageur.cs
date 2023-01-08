@@ -39,15 +39,15 @@ public class Passageur : MonoBehaviour
 
         if (createdGO.CompareTag("Muscle"))
         {
-            AudioManager.instance.PlaySound("MuscleEntre");
+            AudioManager.instance.PlaySound("PersoEntre");
         }
         if (createdGO.CompareTag("Calvitie"))
         {
-            AudioManager.instance.PlaySound("CalvitieEntre");
+            AudioManager.instance.PlaySound("PersoEntre");
         }
         if (createdGO.CompareTag("PixelArt"))
         {
-            AudioManager.instance.PlaySound("JvArrive");
+            AudioManager.instance.PlaySound("PersoEntre");
         }
 
         Character createdChar = createdGO.GetComponent<Character>();
