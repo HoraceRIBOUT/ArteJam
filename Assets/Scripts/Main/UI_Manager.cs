@@ -13,6 +13,7 @@ public class UI_Manager : MonoBehaviour
     public Slider timing;
     public bool stopDecreasing = false;
     public Animator gameOverAnima;
+    public Animator victoryAnima;
 
 
     Coroutine fillUp_CoRout = null;
@@ -37,6 +38,7 @@ public class UI_Manager : MonoBehaviour
     {
         fillUp_CoRout = StartCoroutine(FillUpPatience());
     }
+
 
     public IEnumerator FillUpPatience()
     {
@@ -63,5 +65,12 @@ public class UI_Manager : MonoBehaviour
     public void GameOver()
     {
         gameOverAnima.SetTrigger("GameOver");
+    }
+
+    public void Victory()
+    {
+        victoryAnima.SetTrigger("Victory");
+        GameManager.instance.isVictory = true;
+        GameManager.instance.PrepareForReload(5f);
     }
 }

@@ -22,6 +22,11 @@ public class Passageur : MonoBehaviour
 
     public void CharSuccess()
     {
+        if (allRemainingChar.Count == 0)
+        {
+            GameManager.instance.ui_man.Victory();
+            return;
+        }
         //called by character once there puzzle is resolved
         LaunchNextChar();
     }
