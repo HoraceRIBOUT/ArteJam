@@ -308,9 +308,9 @@ MonoBehaviour:
   textToDisplay: []
   playAnim: 1
   anima: {fileID: 5089114524431997856}
-  triggerName: Bounce
+  triggerName: 
   parentAnima: {fileID: 5089114524431997856}
-  parentTriggerName: 
+  parentTriggerName: Bounce
   parentChar: {fileID: 5089114523811640098}
 --- !u!61 &5089114523968206107
 BoxCollider2D:
