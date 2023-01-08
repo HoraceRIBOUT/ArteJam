@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timingBeforeDestoy: 2
-  offSetY: 2
+  offSetY: 1
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0
