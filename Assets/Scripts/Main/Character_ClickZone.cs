@@ -35,7 +35,9 @@ public class Character_ClickZone : MonoBehaviour
 
         if (bubbleText)
         {
-            //TO DO
+            StartCoroutine(Dialogue(textToDisplay));
+
+
         }
 
         if (playAnim)
@@ -69,9 +71,22 @@ public class Character_ClickZone : MonoBehaviour
         StartCoroutine(TimerBeforeClickAgain());
     }
 
+
     public IEnumerator TimerBeforeClickAgain()
     {
         yield return new WaitForSeconds(howLongToWaitBetweenClick);
         canClickOnIt = true;
     }
+
+
+
+    public IEnumerator Dialogue(List<string> textsToDisplay)
+    {
+        foreach(string textToDisplay in textsToDisplay)
+        {
+            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay);
+            yield return new WaitForSeconds(0.3f);
+        }
+    }
+
 }

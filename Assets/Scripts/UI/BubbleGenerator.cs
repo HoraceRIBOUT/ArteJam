@@ -20,7 +20,7 @@ public class BubbleGenerator : MonoBehaviour
         AddBubble(textToAdd);
     }
 
-    void AddBubble(string text)
+    public void AddBubble(string text)
     {
         Bubble bubb = Instantiate(bubbleGO, this.transform);
 
