@@ -8,8 +8,10 @@ public class MenuSceneTransition : MonoBehaviour
 {
 
     [SerializeField] GameObject menuBase;
+    [SerializeField] CanvasGroup menuBase_Canvas;
     [SerializeField] GameObject menuCredit;
     [SerializeField] GameObject title;
+    [SerializeField] UnityEngine.UI.Image title_Sprite;
     [SerializeField] GameObject sprMiror;
 
     [SerializeField] Animator animator;
@@ -30,12 +32,11 @@ public class MenuSceneTransition : MonoBehaviour
     public void StartSwitchScene()
     {
         StartCoroutine(GameScene());
+        StartCoroutine(ButtonFade());
     }
 
     public IEnumerator GameScene()
     {
-        menuBase.SetActive(!menuBase.activeSelf);
-        title.SetActive(!title.activeSelf);
         animator.SetBool("canPlay", true);
 
         yield return new WaitForSeconds(AudioManager.instance.fadeTime);
@@ -45,6 +46,17 @@ public class MenuSceneTransition : MonoBehaviour
         //StopCoroutine(AudioManager.instance.FadeOutPeopleEntry);
 
         SceneManager.LoadScene(1);
+    }
+    public IEnumerator ButtonFade()
+    {
+        menuBase_Canvas.interactable = false;
+
+        while (menuBase_Canvas.alpha > 0)
+        {
+            menuBase_Canvas.alpha -= Time.deltaTime * 4f;
+            title_Sprite.color -= Color.black * Time.deltaTime * 4f;
+                yield return null;
+        }
     }
 
 }

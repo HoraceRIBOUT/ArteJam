@@ -14,6 +14,7 @@ public class UI_Manager : MonoBehaviour
     public bool stopDecreasing = false;
     public Animator gameOverAnima;
     public Animator victoryAnima;
+    public Animator timingAnimator;
 
 
     Coroutine fillUp_CoRout = null;
@@ -22,9 +23,18 @@ public class UI_Manager : MonoBehaviour
     {
         if (!GameManager.instance.passageur.isActiveAndEnabled)
             return;
-
+        if (GameManager.instance.isIntro)
+            return;
+        if (GameManager.instance.isGameOver)
+            return;
         if (stopDecreasing)
             return;
+
+
+        if (timing.value == 1)
+        {
+            timingAnimator.enabled = false;
+        }
 
         timing.value -= Time.deltaTime / timerDuration;
 
