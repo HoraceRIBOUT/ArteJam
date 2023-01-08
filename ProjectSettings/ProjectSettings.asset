@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: ArteJam-Miroir
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 31b3945579c40b9408e15e4df24254be, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.64882886, g: 0.4009434, b: 1, a: 1}
   m_ShowUnitySplashScreen: 1
