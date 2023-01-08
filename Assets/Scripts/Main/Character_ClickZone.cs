@@ -36,8 +36,6 @@ public class Character_ClickZone : MonoBehaviour
         if (bubbleText)
         {
             StartCoroutine(Dialogue(textToDisplay));
-
-
         }
 
         if (playAnim)
@@ -82,9 +80,12 @@ public class Character_ClickZone : MonoBehaviour
 
     public IEnumerator Dialogue(List<string> textsToDisplay)
     {
+        if (parentChar == null)
+            parentChar = GetComponentInParent<Character>();
+
         foreach(string textToDisplay in textsToDisplay)
         {
-            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay);
+            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay, parentChar.who);
             yield return new WaitForSeconds(0.3f);
         }
     }

@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
 
     public List<string> textToDisplay_intro;
 
+    public BubbleGenerator.who who;
+
     private void Start()
     {
         transform.position = new Vector3(transform.position.x, offSetY, transform.position.z);
@@ -26,7 +28,7 @@ public class Character : MonoBehaviour
     {
         foreach (string textToDisplay in textsToDisplay)
         {
-            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay);
+            GameManager.instance.bubbleTextGen.AddBubble(textToDisplay, BubbleGenerator.who.mirror);
             yield return new WaitForSeconds(0.3f);
         }
     }

@@ -455,6 +455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timingBeforeDestoy: 2
   offSetY: 1
+  textToDisplay_intro:
+  - Hier j'ai vu un pigeon qui avait plus de classe
+  who: 2
 --- !u!1 &3565703758988396502
 GameObject:
   m_ObjectHideFlags: 0

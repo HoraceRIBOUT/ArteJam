@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textToDisplay: "Non, quand m\xEAme pas..."
+  bubbleBg: {fileID: 7418288149407915527}
   textTMP: {fileID: 7418288150452881856}
   rect: {fileID: 7418288149716007583}
   minMaxSize: {x: 60, y: 1200}

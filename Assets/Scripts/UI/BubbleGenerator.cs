@@ -13,18 +13,45 @@ public class BubbleGenerator : MonoBehaviour
 
     public List<Bubble> pastBubble;
 
+    public enum who
+    {
+        mirror,
+        muslce,
+        calvitie,
+        pixel
+    }
+    [System.Serializable]
+    public struct colorPerPerso
+    {
+        public who whos;
+        public Color text;
+        public Color bg;
+    }
+
+    public List<colorPerPerso> colorPerPersos = new List<colorPerPerso>();
+
     public string textToAdd;
     [Button]
     void AddBubble()
     {
-        AddBubble(textToAdd);
+        AddBubble(textToAdd, who.mirror);
     }
 
-    public void AddBubble(string text)
+    public void AddBubble(string text, who who)
     {
+        if (text == "")
+            return;
+
+        colorPerPerso chooseCol = new colorPerPerso();
+        foreach(colorPerPerso col in colorPerPersos)
+        {
+            if (col.whos == who)
+                chooseCol = col;
+        }
+
         Bubble bubb = Instantiate(bubbleGO, this.transform);
 
-        bubb.Create(text, height, spawnPoint.transform.position);
+        bubb.Create(text, height, spawnPoint.transform.position, chooseCol);
         bubb.transform.position = spawnPoint.transform.position + Vector3.right * 200;
 
         if (pastBubble.Count != 0)

@@ -10,6 +10,7 @@ public class Bubble : MonoBehaviour
     public string textToDisplay;
 
     [Header("For code")]
+    public UnityEngine.UI.Image bubbleBg;
     public TMPro.TMP_Text textTMP;
     public RectTransform rect;
 
@@ -22,12 +23,14 @@ public class Bubble : MonoBehaviour
     [Button()]
     public void Create()
     {
-        Create(textToDisplay, rect.sizeDelta.y, this.transform.position);
+        Create(textToDisplay, rect.sizeDelta.y, this.transform.position, new BubbleGenerator.colorPerPerso());
     }
-    public void Create(string text, float height, Vector3 startPos)
+    public void Create(string text, float height, Vector3 startPos, BubbleGenerator.colorPerPerso colPerPers)
     {
         textToDisplay = text;
         textTMP.SetText(text);
+        textTMP.color = colPerPers.text;
+        bubbleBg.color = colPerPers.bg;
 
         float sizeX = text.Length * pixelPerChar + minMaxSize.x;
         if (sizeX > minMaxSize.y)
