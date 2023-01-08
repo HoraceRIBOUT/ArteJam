@@ -11,7 +11,10 @@ public class AudioManager : MonoBehaviour
 
     [Header("Liste De Sons")]
     public SoundClass[] sounds;
-    
+
+    public IEnumerator FadeInMusicGame;
+    public IEnumerator FadeOutMusicMenu;
+    public IEnumerator FadeOutPeopleEntry;
 
     public static AudioManager instance;
 
@@ -42,6 +45,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        FadeInMusicGame = FadeIn(sounds[2], fadeTime);
+        FadeOutMusicMenu = FadeOut(sounds[0], fadeTime);
+        FadeOutPeopleEntry = FadeOut(sounds[1], fadeTime);
+
         PlaySound("MusiqueMenu");
     }
 
@@ -58,11 +65,11 @@ public class AudioManager : MonoBehaviour
 
     public void StartCoroutineFadeOutMenuSound()
     {
-        StartCoroutine(FadeOut(sounds[0], fadeTime)); //Musique nom : MusiqueMenu
+        StartCoroutine(FadeOutMusicMenu); //Musique nom : MusiqueMenu
         PlaySound("PeopleEntry");
-        StartCoroutine(FadeOut(sounds[1], fadeTime)); //Musique nom : PeopleEntry
+        StartCoroutine(FadeOutPeopleEntry); //Musique nom : PeopleEntry
         PlaySound("MusiqueGame");
-        StartCoroutine(FadeIn(sounds[2], fadeTime)); //Musique nom : MusiqueGame
+        StartCoroutine(FadeInMusicGame); //Musique nom : MusiqueGame
     }
 
     public IEnumerator FadeIn(SoundClass soundClass, float FadeTime)

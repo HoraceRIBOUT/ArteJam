@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +32,13 @@ public class MenuSceneTransition : MonoBehaviour
     {
         menuBase.SetActive(!menuBase.activeSelf);
         animator.SetBool("canPlay", true);
+
         yield return new WaitForSeconds(AudioManager.instance.fadeTime);
+
+        //StopCoroutine(AudioManager.instance.FadeOutMusicMenu);
+        //StopCoroutine(AudioManager.instance.FadeInMusicGame);
+        //StopCoroutine(AudioManager.instance.FadeOutPeopleEntry);
+
         SceneManager.LoadScene(1);
     }
 
