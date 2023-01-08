@@ -28,21 +28,28 @@ public class Character : MonoBehaviour
         if (gameObject.CompareTag("Muscle"))
         {
             AudioManager.instance.PlaySound("MuscleEclate");
-            AudioManager.instance.PlaySound("MuscleSortie");
+            AudioManager.instance.PlaySound("MuscleOut");
         }
         if (gameObject.CompareTag("Calvitie"))
         {
             AudioManager.instance.PlaySound("CalvitieWind");
-            AudioManager.instance.PlaySound("CalvitieEntre");
+            //StartCoroutine(playSound());
         }
         if (gameObject.CompareTag("PixelArt"))
         {
             AudioManager.instance.PlaySound("JvHurt");
-            //AudioManager.instance.PlaySound("MuscleSortie");
+            AudioManager.instance.PlaySound("JvMort");
         }
         StartCoroutine(DestroyLater());
     }
 
+    /*
+    public IEnumerator playSound()
+    {
+        yield return new WaitForSeconds(1f);
+        AudioManager.instance.PlaySound("CalvitieSors");
+    }
+    */
     public IEnumerator DestroyLater()
     {
         yield return new WaitForSeconds(timingBeforeDestoy);
