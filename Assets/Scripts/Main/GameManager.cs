@@ -17,6 +17,17 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        StartCoroutine(IntroCoroutine());
+    }
+
+    public IEnumerator IntroCoroutine()
+    {
+        isIntro = true;
+        Debug.Log("onop");
+        yield return new WaitForSeconds(0.5f);
+        isIntro = false;
+        Debug.Log("yep");
+        GameManager.instance.passageur.StartGame();
     }
 
     public Passageur passageur;
@@ -25,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public bool isGameOver = false;
     public bool isVictory = false;
-
+    public bool isIntro = true;
     public void GameOver()
     {
         isGameOver = true;

@@ -9,11 +9,10 @@ public class Passageur : MonoBehaviour
     public List<GameObject> allRemainingChar;
 
     public void Start()
-    {
-        StartGame();    
+    {   
     }
 
-    void StartGame()
+    public void StartGame()
     {
         allRemainingChar = new List<GameObject>(allCharacterToDisplay); //make a copy, and not a ref, to the list
 

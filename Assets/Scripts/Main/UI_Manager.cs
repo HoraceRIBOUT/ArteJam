@@ -22,6 +22,10 @@ public class UI_Manager : MonoBehaviour
     {
         if (!GameManager.instance.passageur.isActiveAndEnabled)
             return;
+        if (GameManager.instance.isIntro)
+            return;
+        if (GameManager.instance.isGameOver)
+            return;
 
         if (stopDecreasing)
             return;
