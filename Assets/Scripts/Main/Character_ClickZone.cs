@@ -52,6 +52,7 @@ public class Character_ClickZone : MonoBehaviour
 
         if (success)
         {
+            
 
             GameManager.instance.ui_man.Success();
 
