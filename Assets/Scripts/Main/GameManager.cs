@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public Passageur passageur;
     public UI_Manager ui_man;
     public PostProcess postProcess;
+    public BubbleGenerator bubbleTextGen;
 
     public bool isGameOver = false;
     public bool isVictory = false;

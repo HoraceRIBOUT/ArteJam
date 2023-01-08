@@ -17,12 +17,14 @@ public class Bubble : MonoBehaviour
 
     public float pixelPerChar = 5f;
 
+    public Vector3 targetPosition = Vector3.zero;
+
     [Button()]
     public void Create()
     {
-        Create(textToDisplay);
+        Create(textToDisplay, rect.sizeDelta.y, this.transform.position);
     }
-    public void Create(string text)
+    public void Create(string text, float height, Vector3 startPos)
     {
         textToDisplay = text;
         textTMP.SetText(text);
@@ -33,7 +35,28 @@ public class Bubble : MonoBehaviour
 
         Debug.Log("sizeX = " + sizeX);
 
-        rect.sizeDelta = new Vector2(sizeX, rect.sizeDelta.y);
+        rect.sizeDelta = new Vector2(sizeX, height);
+        targetPosition = startPos;
+    }
+
+    public void SetTargetPos_Relative(Vector3 offset)
+    {
+        targetPosition += offset;
+    }
+
+    public void Update()
+    {
+        if(this.transform.position != targetPosition)
+        {
+            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * 4f);
+        }
+    }
+
+
+    public void End()
+    {
+        GameManager.instance.bubbleTextGen.pastBubble.Remove(this);
+        Destroy(this.gameObject);
     }
 
 }
