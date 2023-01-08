@@ -9,6 +9,8 @@ public class MenuSceneTransition : MonoBehaviour
 
     [SerializeField] GameObject menuBase;
     [SerializeField] GameObject menuCredit;
+    [SerializeField] GameObject title;
+    [SerializeField] GameObject sprMiror;
 
     [SerializeField] Animator animator;
 
@@ -21,6 +23,8 @@ public class MenuSceneTransition : MonoBehaviour
     {
         menuBase.SetActive(!menuBase.activeSelf);
         menuCredit.SetActive(!menuCredit.activeSelf);
+        title.SetActive(!title.activeSelf);
+        sprMiror.SetActive(!sprMiror.activeSelf);
     }
 
     public void StartSwitchScene()
@@ -31,6 +35,7 @@ public class MenuSceneTransition : MonoBehaviour
     public IEnumerator GameScene()
     {
         menuBase.SetActive(!menuBase.activeSelf);
+        title.SetActive(!title.activeSelf);
         animator.SetBool("canPlay", true);
 
         yield return new WaitForSeconds(AudioManager.instance.fadeTime);
