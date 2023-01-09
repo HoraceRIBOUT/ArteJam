@@ -1292,6 +1292,9 @@ MonoBehaviour:
   - whos: 3
     text: {r: 0, g: 0, b: 0, a: 1}
     bg: {r: 1, g: 0.47450984, b: 0.49075702, a: 1}
+  - whos: 4
+    text: {r: 0, g: 0, b: 0, a: 1}
+    bg: {r: 1, g: 0.50980395, b: 0.08235294, a: 1}
   textToAdd: Oh quelle trnche de cake lui...
 --- !u!1 &1414495281
 GameObject:
@@ -2236,6 +2239,7 @@ MonoBehaviour:
   - {fileID: 3565703758857625097, guid: 4e6b426e51079d64ba164c384438d3fd, type: 3}
   - {fileID: 3565703758857625097, guid: c9a72eeb4eb7df745bdbbefc88598ee9, type: 3}
   - {fileID: 5089114523811640100, guid: c2da8a8f2c800a2478c338f77dd3daea, type: 3}
+  - {fileID: 5679771708692026797, guid: 26cab4d9312ebfd43b57d87a9e70c4be, type: 3}
   allRemainingChar: []
 --- !u!4 &2110383074
 Transform:

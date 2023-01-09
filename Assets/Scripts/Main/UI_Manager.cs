@@ -21,8 +21,9 @@ public class UI_Manager : MonoBehaviour
 
     public void Update()
     {
+        /*
         if (!GameManager.instance.passageur.isActiveAndEnabled)
-            return;
+            return;*/
         if (GameManager.instance.isIntro)
             return;
         if (GameManager.instance.isGameOver)

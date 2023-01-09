@@ -36,8 +36,6 @@ public class Bubble : MonoBehaviour
         if (sizeX > minMaxSize.y)
             sizeX = minMaxSize.y;
 
-        Debug.Log("sizeX = " + sizeX);
-
         rect.sizeDelta = new Vector2(sizeX, height);
         targetPosition = startPos;
     }

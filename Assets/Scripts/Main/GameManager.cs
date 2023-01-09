@@ -26,15 +26,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Don't play game");
         }
-        else
-        {
-            isIntro = true;
-            Debug.Log("onop");
-            yield return new WaitForSeconds(0.5f);
-            isIntro = false;
-            Debug.Log("yep");
-            passageur.StartGame();
-        }
+
+        isIntro = true;
+        Debug.Log("onop");
+        yield return new WaitForSeconds(0.5f);
+        isIntro = false;
+        Debug.Log("yep");
+        passageur.StartGame();
 
     }
 

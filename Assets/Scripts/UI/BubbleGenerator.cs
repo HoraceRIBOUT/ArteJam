@@ -18,7 +18,8 @@ public class BubbleGenerator : MonoBehaviour
         mirror,
         muslce,
         calvitie,
-        pixel
+        pixel,
+        girlBoss
     }
     [System.Serializable]
     public struct colorPerPerso
