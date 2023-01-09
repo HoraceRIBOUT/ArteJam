@@ -490,7 +490,8 @@ MonoBehaviour:
   success: 0
   bubbleText: 1
   textToDisplay:
-  - "Hmm... ces abdos saillants... Si je pouvais m\u2019\xE9pouser je le ferais"
+  - Hmm... ces abdos saillants...
+  - "Si je pouvais m\u2019\xE9pouser je le ferais"
   playAnim: 1
   anima: {fileID: 0}
   triggerName: 
