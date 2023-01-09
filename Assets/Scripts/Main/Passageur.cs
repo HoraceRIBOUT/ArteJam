@@ -8,9 +8,6 @@ public class Passageur : MonoBehaviour
 
     public List<GameObject> allRemainingChar;
 
-    public void Start()
-    {   
-    }
 
     public void StartGame()
     {

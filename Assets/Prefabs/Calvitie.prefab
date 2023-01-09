@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 3565703758355424288}
   - component: {fileID: 3565703758355424289}
   m_Layer: 0
-  m_Name: Moustache
+  m_Name: arbe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -900,16 +900,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1075ca51d785c40a0d8163c3bcfc57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howLongToWaitBetweenClick: 0.4
+  howLongToWaitBetweenClick: 1.2
   success: 0
   bubbleText: 1
   textToDisplay:
   - Quel style !
-  playAnim: 0
+  playAnim: 1
   anima: {fileID: 0}
   triggerName: 
   parentAnima: {fileID: 3565703758570976909}
-  parentTriggerName: Horror
+  parentTriggerName: Tie
   parentChar: {fileID: 0}
 --- !u!61 &5362620428838116033
 BoxCollider2D:

@@ -22,12 +22,20 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator IntroCoroutine()
     {
-        isIntro = true;
-        Debug.Log("onop");
-        yield return new WaitForSeconds(0.5f);
-        isIntro = false;
-        Debug.Log("yep");
-        GameManager.instance.passageur.StartGame();
+        if (!passageur.isActiveAndEnabled)
+        {
+            Debug.Log("Don't play game");
+        }
+        else
+        {
+            isIntro = true;
+            Debug.Log("onop");
+            yield return new WaitForSeconds(0.5f);
+            isIntro = false;
+            Debug.Log("yep");
+            passageur.StartGame();
+        }
+
     }
 
     public Passageur passageur;
